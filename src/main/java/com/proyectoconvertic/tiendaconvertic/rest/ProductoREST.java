@@ -31,11 +31,11 @@ public class ProductoREST {
         return productoServicio.findAll();
     }
 
-    @GetMapping("/{id}")
+/*    @GetMapping("/{id}")
     public Producto buscarPorId(@PathVariable(name = "id") Integer idProducto) {
 
         return productoServicio.findById(idProducto).orElse(null);
-    }
+    }*/
 
     @GetMapping("/seccion/{idSeccion}")
     public Producto buscarPorIdSeccion(@PathVariable(name = "idSeccion") Integer idProducto) {

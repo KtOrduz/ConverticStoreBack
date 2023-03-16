@@ -5,8 +5,7 @@ import com.proyectoconvertic.tiendaconvertic.repositorios.ProductoRepositorio;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 @Service
 public class ProductoServicio {
@@ -65,5 +64,19 @@ public List<Producto> findAll (){
 
     }
 
+ /*   Map<Producto, Integer> contadorBusquedas = new HashMap<>();
+    List<Producto> productosPopulares = new ArrayList<>();
+
+    contadorBusquedas.merge(productoBuscado, 1, Integer::sum);
+
+    productosPopulares = contadorBusquedas.entrySet().stream()
+        .sorted(Map.Entry.<Producto, Integer>comparingByValue().reversed())
+            .map(Map.Entry::getKey)
+        .collect(Collectors.toList());
+
+System.out.println("Los productos más buscados son:");
+for (Producto p : productosPopulares) {
+        System.out.println(p.getNombre());
+    }*/
 
 }
